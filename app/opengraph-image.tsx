@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
-export const alt = "Precedent - Building blocks for your Next.js project";
+export const alt = "Side Yard - Second Changes for Side Projects";
 export const contentType = "image/png";
 
 export default async function OG() {
@@ -26,7 +26,7 @@ export default async function OG() {
         }}
       >
         <img
-          src={new URL("../public/logo.png", import.meta.url).toString()}
+          src={new URL("../public/logo.svg", import.meta.url).toString()}
           alt="Precedent Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
