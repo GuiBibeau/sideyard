@@ -1,6 +1,6 @@
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
-import { Twitter } from "@/components/shared/icons";
+import { Github } from "@/components/shared/icons";
 import GiveHeart from "@/components/home/give-heart";
 import ComponentGrid from "@/components/home/component-grid";
 import { ListButton } from "@/components/home/list-button";
@@ -12,15 +12,13 @@ export default async function Home() {
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-          href="https://twitter.com/GuiBibeau/status/1702430086967042404"
+          href="https://github.com/GuiBibeau/sideyard"
           target="_blank"
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
-          <Twitter className="h-5 w-5 text-black" />
-          <p className="text-sm font-semibold text-black">
-            Introducing Side Yard
-          </p>
+          <Github className="h-5 w-5 text-black" />
+          <p className="text-sm font-semibold text-black">Give us a star!</p>
         </a>
         <h1
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
