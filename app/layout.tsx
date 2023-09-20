@@ -7,17 +7,17 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "Side Yard - Second Changes for Side Projects",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+    "Side Yard is a marketplace for side projects. Buy and sell side projects with ease.",
   twitter: {
     card: "summary_large_image",
-    title: "Precedent - Building blocks for your Next.js project",
+    title: "Side Yard - Second Changes for Side Projects",
     description:
-      "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-    creator: "@steventey",
+      "Side Yard is a marketplace for side projects. Buy and sell side projects with ease",
+    creator: "@guibibeau",
   },
-  metadataBase: new URL("https://precedent.dev"),
+  metadataBase: new URL("http://www.sideyard.app/"),
   themeColor: "#FFF",
 };
 
