@@ -40,7 +40,6 @@ export function ListForm({ setShowListModal }: Props) {
       }
     } catch (error) {
       toast.error("Something went wrong. Please try again later.");
-      console.log(error);
     }
   };
   return (
