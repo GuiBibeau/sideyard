@@ -51,6 +51,6 @@ This project is based on [Steven Tey's Precedent template.](https://github.com/s
 Feel free to reach out for any questions, suggestions, or to discuss future collaborations.
 
 - Website: [Side Yard](https://www.sideyard.app)
-- Email: [support@sideyard.com](mailto:guibibeau@gmail.com)
+- Email: [guibibeau@gmail.com](mailto:guibibeau@gmail.com)
 
 Happy Coding! 🌟
