@@ -7,12 +7,12 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Side Yard - Second Changes for Side Projects",
+  title: "Side Yard - Second Chances for Side Projects",
   description:
     "Side Yard is a marketplace for side projects. Buy and sell side projects with ease.",
   twitter: {
     card: "summary_large_image",
-    title: "Side Yard - Second Changes for Side Projects",
+    title: "Side Yard - Second Chances for Side Projects",
     description:
       "Side Yard is a marketplace for side projects. Buy and sell side projects with ease",
     creator: "@guibibeau",

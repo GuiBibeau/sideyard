@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
-export const alt = "Side Yard - Second Changes for Side Projects";
+export const alt = "Side Yard - Second Chances for Side Projects";
 export const contentType = "image/png";
 
 export default async function OG() {
