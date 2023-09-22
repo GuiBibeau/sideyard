@@ -153,14 +153,14 @@ export function ListForm({ setShowListModal }: Props) {
         <Form.Message
           match={(_, formData) => {
             const value = formData.get("file") as File;
-            const maxSize = 10 * 1024 * 1024;
+            const maxSize = 4.5 * 1024 * 1024;
             setFileError(value.size > maxSize);
             return value.size > maxSize;
           }}
         />
         {fileError && (
           <p className="flex text-sm font-medium leading-6 text-red-900">
-            Please limit your file to 10mb
+            Please limit your file to 4.5mb
           </p>
         )}
 
