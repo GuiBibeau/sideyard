@@ -140,6 +140,7 @@ export function ListForm({ setShowListModal }: Props) {
             <input
               type="number"
               required
+              accept="image/jpeg, image/png, image/gif, image/bmp, image/webp, video/mp4, video/quicktime, video/x-msvideo, video/x-ms-wmv, video/webm"
               min={0}
               max={100000}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"

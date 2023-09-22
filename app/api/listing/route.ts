@@ -5,13 +5,14 @@ import { authOptions } from "../auth/[...nextauth]/route";
 import { put } from "@vercel/blob";
 import { generateNanoId } from "@/lib/nanoid";
 import { Session } from "next-auth"; // Make sure to import the correct type
+import { getExtensionFromBlob } from "@/lib/file-extension";
 
 type FormData = {
   name: string;
   email: string;
   description: string;
   type: string;
-  file: string;
+  file: Blob;
   price: string;
 };
 
@@ -30,14 +31,16 @@ const parseFormData = async (request: Request): Promise<FormData> => {
     email: formData.get("email") as string,
     description: formData.get("description") as string,
     type: formData.get("type") as string,
-    file: formData.get("file") as string,
+    file: formData.get("file") as Blob,
     price: formData.get("price") as string,
   };
 };
 
-const uploadFile = async (file: string) => {
+const uploadFile = async (file: Blob) => {
   const fileId = generateNanoId(21);
-  return await put(fileId, file, { access: "public" });
+  const fileExtension = getExtensionFromBlob(file);
+  const fileName = `${fileId}${fileExtension}`;
+  return await put(fileName, file, { access: "public" });
 };
 
 export async function POST(request: Request) {
