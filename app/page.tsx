@@ -6,7 +6,6 @@ import ComponentGrid from "@/components/home/component-grid";
 import { ListButton } from "@/components/home/list-button";
 import SellStat from "@/components/home/sell-stat";
 import Friend from "@/components/home/friend";
-import { UserButton } from "@clerk/nextjs";
 
 export default async function Home() {
   return (
