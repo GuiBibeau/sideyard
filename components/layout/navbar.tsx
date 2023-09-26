@@ -2,19 +2,22 @@
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
-import UserDropdown from "./user-dropdown";
-import { Session } from "next-auth";
-import { useEmailModal } from "./email-modal";
 import { Toaster } from "sonner";
+import { SignInButton } from "@clerk/nextjs";
+import { ClerkLoading } from "@clerk/nextjs";
 
-export default function NavBar({ session }: { session: Session | null }) {
-  const { EmailModal, setShowEmailModal } = useEmailModal();
+import UserDropdown from "./user-dropdown";
+
+export default function NavBar({
+  user,
+}: {
+  user: { email: string; image: string | null } | null;
+}) {
   const scrolled = useScroll(50);
 
   return (
     <>
       <Toaster richColors position="top-center" />
-      <EmailModal />
       <div
         className={`fixed top-0 flex w-full justify-center ${
           scrolled
@@ -26,23 +29,23 @@ export default function NavBar({ session }: { session: Session | null }) {
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.svg"
-              alt="Precedent logo"
+              alt="SideYard logo"
               width="150"
               height="100"
               className="mr-2 rounded-sm"
             ></Image>
           </Link>
-          <div>
-            {session ? (
-              <UserDropdown session={session} />
-            ) : (
-              <button
-                className="rounded-full border border-black bg-black px-4 py-2 text-base text-white transition-all hover:bg-white hover:text-black"
-                onClick={() => setShowEmailModal(true)}
-              >
-                See all projects
-              </button>
-            )}
+
+          <div className="flex items-center space-x-6">
+            <Link
+              href="/search"
+              className="rounded-full border border-black bg-black px-4 py-2 text-base text-white transition-all hover:bg-white hover:text-black"
+            >
+              See all projects
+            </Link>
+            <div className="w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent py-2 opacity-20 dark:opacity-100" />
+            <ClerkLoading>{!user && <p>Sign in</p>}</ClerkLoading>
+            {user ? <UserDropdown {...user} /> : <SignInButton />}
           </div>
         </div>
       </div>

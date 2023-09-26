@@ -8,7 +8,6 @@ import {
   useMemo,
 } from "react";
 import { ListForm } from "./list-form";
-import { Toaster } from "sonner";
 
 const ListModal = ({
   showListModal,
