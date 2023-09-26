@@ -13,6 +13,6 @@ export const config = {
      * - public folder
      */
     "/((?!static|.*\\..*|_next|favicon.ico).*)",
-    "/",
+    "/*",
   ],
 };
