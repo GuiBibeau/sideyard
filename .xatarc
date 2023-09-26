@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Guillaume-Bibeau-laviolette-s-workspace-uueint.us-east-1.xata.sh/db/sideyard",
+  "codegen": {
+    "output": "./lib/xata.ts"
+  }
+}
